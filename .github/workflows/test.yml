@@ -12,7 +12,7 @@ jobs:
     
     strategy:
       matrix:
-        node-version: 18
+        node-version: [18]
     
     steps:
     - name: Checkout code
@@ -34,8 +34,8 @@ jobs:
       uses: codecov/codecov-action@v4
       with:
         token: ${{ secrets.CODECOV_TOKEN }}
-        file: ./coverage/lcov.info
-        flag: unittests
+        files: ./coverage/lcov.info
+        flags: unittests
         fail_ci_if_error: true
         verbose: true
         name: 'Unit Tests Coverage'

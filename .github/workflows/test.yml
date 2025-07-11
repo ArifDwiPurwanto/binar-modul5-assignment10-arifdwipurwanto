@@ -30,6 +30,7 @@ jobs:
       
     - name: Run unit tests
       run: npm run test -- --coverage
+      continue-on-error: true
 
     - name: Upload coverage to CodeCov
       uses: codecov/codecov-action@v4

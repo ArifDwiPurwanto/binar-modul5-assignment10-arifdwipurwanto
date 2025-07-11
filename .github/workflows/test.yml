@@ -28,7 +28,7 @@ jobs:
       run: npm install
       
     - name: Run unit tests
-      run: npm run test:ci -- --coverage
+      run: npm run test -- --coverage
 
     - name: Upload coverage to CodeCov
       uses: codecov/codecov-action@v4

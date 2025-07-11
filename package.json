@@ -7,8 +7,7 @@
     "build": "next build",
     "start": "next start",
     "lint": "next lint",
-    "test": "jest --watchAll",
-    "test:ci": "jest --watchAll=false"
+    "test": "jest --watchAll"
   },
   "dependencies": {
     "@primer/css": "17.0.1",

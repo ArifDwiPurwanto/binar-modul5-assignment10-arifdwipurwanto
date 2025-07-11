@@ -1,3 +1,5 @@
+[![codecov](https://codecov.io/github/ArifDwiPurwanto/binar-modul5-assignment10-arifdwipurwanto/branch/main/graph/badge.svg?token=5NP4AAU3HW)](https://codecov.io/github/ArifDwiPurwanto/binar-modul5-assignment10-arifdwipurwanto)
+
 # Update-Profile: A Fullstack Next.js Project
 
 ## Project Description

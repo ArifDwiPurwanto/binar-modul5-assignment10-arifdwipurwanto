@@ -82,6 +82,7 @@ export default function PasswordPage() {
         toast.error(data.error || "An error occurred.", { id: toastId });
       }
     } catch (error) {
+      console.error("Network error:", error);
       toast.error("Network error occurred.", { id: toastId });
     }
   };

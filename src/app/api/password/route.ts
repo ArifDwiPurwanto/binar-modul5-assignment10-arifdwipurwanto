@@ -1,11 +1,6 @@
 import { NextResponse } from "next/server";
 
-export async function POST(request?: Request) {
-  // Handle case where no request is provided (for backward compatibility with existing test)
-  if (!request) {
-    return NextResponse.json({ message: "Not implemented" }, { status: 501 });
-  }
-
+export async function POST(request: Request) {
   try {
     // Check for authorization token
     const authHeader = request.headers.get("authorization");

@@ -5,11 +5,19 @@ import { POST } from "@/app/api/password/route";
 import { NextRequest } from "next/server";
 
 describe("POST /api/password", () => {
-  it("should return 501 for not implemented endpoint", async () => {
-    const response = await POST();
-    expect(response.status).toBe(501);
+  it("should return 401 for missing authorization token", async () => {
+    const request = new NextRequest("http://localhost/api/password", {
+      method: "POST",
+      body: JSON.stringify({
+        currentPassword: "oldpassword123",
+        newPassword: "newpassword123",
+        confirmPassword: "newpassword123"
+      }),
+    });
+    const response = await POST(request);
+    expect(response.status).toBe(401);
     const data = await response.json();
-    expect(data.message).toBe("Not implemented");
+    expect(data.error).toBe("Authorization token is required");
   });
 
   // Future test cases for when the API is implemented with proper request handling
